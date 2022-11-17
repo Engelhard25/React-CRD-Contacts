@@ -18,10 +18,10 @@ const ContactForm = ({add}) => {
     };
 
     return (
-        <form onClick={AddContact} className='d-flex justify-content-center align-items-center mb-4'>
-            <div>
-                <input ref={NameRef} id='input-name' type='text' required autoFocus placeholder='Contact name' className='form-control fomr-control-lg'/>
-                <input ref={PhoneRef} id='input-name' type='text' required placeholder='Contact phone' className='form-control fomr-control-lg'/>
+        <form onSubmit={AddContact} className='d-flex justify-content-center align-items-center mb-4'>
+            <div className='form-outline flex-fill'>
+                <input ref={NameRef} id='input-name' type='text' required autoFocus placeholder='Contact name' className='form-control form-control-lg'/>
+                <input ref={PhoneRef} id='input-phone' type='text' required placeholder='Contact phone' className='form-control fomr-control-lg'/>
             </div>
             <button type='submit' className='btn btn-success btn-lg ms-2'>
                 <p>Create new contact</p>
